@@ -1,58 +1,60 @@
-let slideCarrossel = document.getElementsByClassName('imagem-lista')
+const imagens = document.querySelectorAll(".slide")
+const setaVoltar = document.getElementById("seta-voltar")
+const setaAvancar = document.getElementById("seta-avancar")
 
-let setaAvancar = document.getElementById('seta-avancar')
-let setaVoltar = document.getElementById('seta-retroceder')
+let imagemAtual = 0
 
-let tituloCartao = document.getElementById('title')
-
-let corLink = document.getElementsByClassName('linkagem')
-
-let indiceImagem = 0
-
-let indiceTitulo = 1
-
-function avancarImagem() {
-    slideCarrossel[indiceImagem].classList.remove('actived')
-    indiceImagem++
-    slideCarrossel[indiceImagem].classList.add('actived')
-
-    indiceTitulo++
-    tituloCartao.innerHTML = `Título imagem ${indiceTitulo}`
-
-    setaVoltar.style.display = 'block'
-
-    if (indiceImagem === slideCarrossel.length - 1) {
-        setaAvancar.style.display = 'none'
-    }
+setaAvancar.addEventListener('click', function(){
     
-    if(indiceTitulo === 2){
-        corLink.style.color = "yellow"
+    if(imagemAtual === imagens.length - 1){
+        return;
     }
+    esconderImagemAberta();
+
+    imagemAtual++
+
+    imagens[imagemAtual].classList.add('mostrar')
+
+    esconderSetas();
+})
+
+
+
+setaVoltar.addEventListener('click', function(){
+   
+    if(imagemAtual === 0){
+        return;
+    }
+
+    esconderImagemAberta();
+
+    imagemAtual--
+
+    imagens[imagemAtual].classList.add('mostrar')
+
+    esconderSetas();
+})
+
+
+function esconderImagemAberta(){
+    const imagemAberta = document.querySelector(".mostrar");
+
+    imagemAberta.classList.remove('mostrar')
 }
 
-function voltarImagem(){
-    slideCarrossel[indiceImagem].classList.remove('actived')
 
-    indiceImagem--
-
-    slideCarrossel[indiceImagem].classList.add('actived')
-
-    indiceTitulo--
-    tituloCartao.innerHTML = `Título imagem ${indiceTitulo}`
-
-    setaAvancar.style.display = 'block'
-
-    if(indiceImagem === 0){
-        setaVoltar.style.display = 'none'
+function esconderSetas(){
+    const segundaImagem = imagemAtual !== 0;
+    if(segundaImagem){
+        setaVoltar.classList.remove('opacidade');
+    }else{
+        setaVoltar.classList.add('opacidade')
     }
-    
-    console.log(indiceImagem)
 
-    if (indiceImagem === 1) {
-        corLink.style.color = "yellow"
-    } else if (indiceImagem === 2) {
-        corLink.style.color = '#A63A17'
-    } else if (indiceImagem === 3) {
-        corLink.style.color = '#10ACDD'
+    const ultimaImagem = imagemAtual !== 0 && imagemAtual === imagens.length - 1;
+    if(ultimaImagem){
+        setaAvancar.classList.add('opacidade')
+    }else{
+        setaAvancar.classList.remove('opacidade')
     }
 }

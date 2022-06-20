@@ -1,56 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Carrosel</title>
-    <link rel="stylesheet" href="src/style.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 
 <body>
+    <div class="imagens-slider">
+        <a href="#" id="seta-voltar" class="seta-voltar opacidade">
+            <img src="src/images/seta esquerda.svg" alt="seta voltar">
+        </a>
 
-    <div class="carrossel">
+        <div class="slide slide-vermelho mostrar">
+            <div class="conteudo">
+                <h2 class="titulo">Título imagem 1</h2>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat
+                </p>
 
-        <div class="imagem-lista actived"><img src="src/images/imagem1.jpg" alt=""></div>
+                <a href="#" class="botao vermelho">Saiba mais</a>
+            </div>
+        </div>
 
-        <div class="imagem-lista"><img src="src/images/imagem2.svg" alt=""></div>
+        <div class="slide slide-amarelo">
+            <div class="conteudo">
+                <h2 class="titulo">Título imagem 2</h2>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat
+                </p>
 
-        <div class="imagem-lista"><img src="src/images/Imagem3.svg" alt=""></div>
+                <a href="#" class="botao amarelo">Saiba mais</a>
+            </div>
+        </div>
 
-        <div class="imagem-lista"><img src="src/images/imagem4.svg" alt=""></div>
+        <div class="slide slide-laranja">
+            <div class="conteudo">
+                <h2 class="titulo">Título imagem 3</h2>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat
+                </p>
+
+                <a href="#" class="botao laranja">Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="slide slide-azul">
+            <div class="conteudo">
+                <h2 class="titulo">Título imagem 4</h2>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat aliquet, at eleifend augue pulvinar. Phasellus nulla eros, consequat a ipsum in, ultrices volutpat felis. Duis in nibh a tellus sodales finibus. Fusce libero turpis, sodales eu facilisis et, tristique vitae nibh. Praesent arcu eros, condimentum a interdum in, semper in ante. Suspendisse dolor urna, volutpat
+                </p>
+
+                <a href="#" class="botao azul">Saiba mais</a>
+            </div>
+        </div>
+
+        <a href="#" id="seta-avancar" class="seta-avancar">
+            <img src="src/images/seta direita.svg" alt="seta avançar">
+        </a>
 
     </div>
 
-    <button onclick="voltarImagem()" class="botao-retroceder">
-        <img src="src/images/seta esquerda.svg" id="seta-retroceder"/>
-    </button>
-
-    <button onclick="avancarImagem()" class="botao-avancar">
-        <img src="src/images/seta direita.svg" id="seta-avancar"/>
-    </button>
-
-    <div class="container-cartao">
-        <section class="cartao">
-
-            <h2 id="title">Titulo Imagem 1</h2>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sit
-                voluptatibus rem optio aliquam temporibus iusto necessitatibus
-                aperiam, laudantium error debitis eius delectus voluptatum, recusandae
-                excepturi ea minus consectetur id. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Rerum sit esse sint exercitationem
-                itaque quidem, accusantium quasi laboriosam commodi provident id
-                nesciunt tenetur
-            </p>
-
-            <a href="/" class="linkagem">Saiba mais</a>
-        </section>
-    </div>
 
     <script type="text/javascript" src="script.js"></script>
+
+
 </body>
 
 </html>
